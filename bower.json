@@ -1,0 +1,28 @@
+{
+  "name": "nessy",
+  "version": "1.0.0",
+  "homepage": "https://github.com/coderaiser/nessy",
+  "authors": [
+    "coderaiser <mnemonic.enemy@gmail.com>"
+  ],
+  "description": "set value in nested object",
+  "main": "lib/nessy.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "json",
+    "object",
+    "value",
+    "nested",
+    "set"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "src"
+  ]
+}

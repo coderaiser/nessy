@@ -1,0 +1,8 @@
+src
+dist
+test
+.jscsrc
+.babelrc
+.jshintrc
+.travis.yml
+.editorconfig
