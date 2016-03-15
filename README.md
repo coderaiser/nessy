@@ -1,5 +1,4 @@
-Nessy
-=======
+# Nessy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
 Set value in nested object.
 
@@ -33,3 +32,15 @@ nessy('hello.world', 'why not?', {
 ## License
 
 MIT
+
+[NPMIMGURL]:                https://img.shields.io/npm/v/nessy.svg?style=flat
+[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/nessy/master.svg?style=flat
+[DependencyStatusIMGURL]:   https://img.shields.io/gemnasium/coderaiser/nessy.svg?style=flat
+[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[NPMURL]:                   https://npmjs.org/package/nessy "npm"
+[BuildStatusURL]:           https://travis-ci.org/coderaiser/nessy  "Build Status"
+[DependencyStatusURL]:      https://gemnasium.com/coderaiser/nessy "Dependency Status"
+[LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
+
+[CoverageURL]:              https://coveralls.io/github/coderaiser/nessy?branch=master
+[CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/nessy/badge.svg?branch=master&service=github
