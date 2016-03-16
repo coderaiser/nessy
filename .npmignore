@@ -4,5 +4,6 @@ test
 .jscsrc
 .babelrc
 .jshintrc
+bower.json
 .travis.yml
 .editorconfig
