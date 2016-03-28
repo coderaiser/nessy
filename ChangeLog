@@ -1,3 +1,10 @@
+2016.03.28, v1.0.2
+
+feature:
+- (nessy) some -> forEach
+- (npmignore) add bower.json
+
+
 2016.03.15, v1.0.1
 
 fix:

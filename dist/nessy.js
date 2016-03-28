@@ -8,7 +8,7 @@ module.exports = function (selector, value, obj) {
 
     check(selector);
 
-    selector.split('.').some(function (name, i, arr) {
+    selector.split('.').forEach(function (name, i, arr) {
         if (typeof obj[name] === 'undefined') {
             if (i === arr.length - 1) obj[name] = value;else obj[name] = {};
         }
