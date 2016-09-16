@@ -20,6 +20,19 @@ test('result: should return nested object', (t) => {
     t.end();
 });
 
+test('result: should set object\'s property', (t) => {
+    const actual        = nessy('hello', 'world', {
+        hello: 'something'
+    });
+    
+    const expected      = {
+        hello: 'world'
+    };
+    
+    t.deepEqual(actual, expected, 'should return object');
+    t.end();
+});
+
 test('result: should modify object', (t) => {
     let obj             = {};
     const actual        = nessy('hello.world', 'good', obj);

@@ -9,12 +9,10 @@ module.exports = (selector, value, obj) => {
     
     selector.split('.')
         .forEach((name, i, arr) => {
-            if (typeof obj[name] === 'undefined') {
-               if (i === arr.length - 1)
-                   obj[name] = value;
-               else
-                   obj[name] = {};
-            }
+           if (i === arr.length - 1)
+               obj[name] = value;
+           else
+               obj[name] = {};
             
             obj = obj[name];
         });
