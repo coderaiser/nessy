@@ -5,10 +5,11 @@
   "main": "lib/nessy.js",
   "scripts": {
     "test": "tape test/*.js",
+    "init": "mkdirp lib",
     "jscs": "jscs --esnext src test",
     "jshint": "jshint src test",
     "codestyle": "redrun jshint jscs",
-    "build": "redrun clean 6to5 bundle bundle:es6 minify",
+    "build": "redrun init clean 6to5 bundle bundle:es6 minify",
     "minify": "minify dist/nessy.js > dist/nessy.min.js",
     "6to5": "babel -d lib src",
     "wisdom": "npm run build",
