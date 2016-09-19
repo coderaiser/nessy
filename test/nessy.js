@@ -33,6 +33,25 @@ test('result: should set object\'s property', (t) => {
     t.end();
 });
 
+test('result: should set object\'s property, when there is parent node', (t) => {
+    const actual        = nessy('hello.world', 'anyone', {
+        hello: {
+            world: 'someone',
+            cloud: true
+        }
+    });
+    
+    const expected      = {
+        hello: {
+            world: 'anyone',
+            cloud: true
+        }
+    };
+    
+    t.deepEqual(actual, expected, 'should not clear parent node');
+    t.end();
+});
+
 test('result: should modify object', (t) => {
     let obj             = {};
     const actual        = nessy('hello.world', 'good', obj);
