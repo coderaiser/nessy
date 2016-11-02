@@ -1,6 +1,6 @@
 # Nessy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
-Set value in nested object. Use [jessy](https://github.com/coderaiser/jessy "jessy") to get value.
+Set value in nested object.
 
 ## Install
 
@@ -28,6 +28,11 @@ nessy('hello.world', 'why not?', {
     }
 }
 ```
+
+## Related
+
+- [jessy](https://github.com/coderaiser/jessy "jessy") - get value by object property.
+- [all-object-keys](https://github.com/coderaiser/all-object-keys "all-object-keys") - get all keys of object.
 
 ## License
 
