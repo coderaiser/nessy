@@ -1,6 +1,6 @@
 {
   "name": "nessy",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "set value in nested object",
   "main": "lib/nessy.js",
   "scripts": {
