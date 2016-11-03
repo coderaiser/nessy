@@ -29,6 +29,14 @@ nessy('hello.world', 'why not?', {
 }
 ```
 
+## Environments
+
+In old `node.js` environments that not fully supports `es2015`, `nessy` could be used with:
+
+```js
+var nessy = require('nessy/legacy');
+```
+
 ## Related
 
 - [jessy](https://github.com/coderaiser/jessy "jessy") - get value by object property.

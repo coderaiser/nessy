@@ -1,7 +1,7 @@
 'use strict';
 
-let test    = require('tape');
-let nessy   = require('../src/nessy');
+const test = require('tape');
+const nessy = require('..');
 
 test('arguments: no', (t) => {
     t.throws(nessy, /selector should be string!/, 'should throw when no path');
@@ -53,7 +53,7 @@ test('result: should set object\'s property, when there is parent node', (t) => 
 });
 
 test('result: should modify object', (t) => {
-    let obj             = {};
+    const obj             = {};
     const actual        = nessy('hello.world', 'good', obj);
     t.deepEqual(actual, obj, 'object should be changed');
     t.end();
