@@ -9,7 +9,7 @@ Set value in nested object.
 ## Hot to use?
 
 ```js
-var nessy = require('nessy');
+const nessy = require('nessy');
 
 nessy('hello.world', 'why not?', {
     hello: {
