@@ -1,3 +1,18 @@
+2017.07.14, v2.1.0
+
+fix:
+- (travis) codestyle -> lint
+
+feature:
+- (nessy) add ability to use custom divider
+- (package) minify v3.0.0
+- (package) nyc v11.0.2
+- (package) browserify v14.0.0
+- (package) nyc v10.0.0
+- (travis) node_js: 6, 7
+- (package) nyc v9.0.1
+
+
 2016.11.03, v2.0.0
 
 feature:
