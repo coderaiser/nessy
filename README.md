@@ -11,10 +11,27 @@ Set value in nested object.
 ```js
 const nessy = require('nessy');
 
-nessy('hello.world', 'why not?', {
+nessy('hello.world', 'why not?', '.', {
     hello: {
         world: {
             'could be used in browser as well'
+        }
+    }
+});
+
+// returns
+{
+    hello: {
+        world: {
+            'why not?'
+        }
+    }
+}
+
+nessy('hello*world', 'why not?', '*', {
+    hello: {
+        world: {
+            'can be used any divider'
         }
     }
 });

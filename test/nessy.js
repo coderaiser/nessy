@@ -34,14 +34,33 @@ test('result: should set object\'s property', (t) => {
 });
 
 test('result: should set object\'s property, when there is parent node', (t) => {
-    const actual        = nessy('hello.world', 'anyone', {
+    const actual = nessy('hello.world', 'anyone', {
         hello: {
             world: 'someone',
             cloud: true
         }
     });
     
-    const expected      = {
+    const expected = {
+        hello: {
+            world: 'anyone',
+            cloud: true
+        }
+    };
+    
+    t.deepEqual(actual, expected, 'should not clear parent node');
+    t.end();
+});
+
+test('nessy: custom divider', (t) => {
+    const actual = nessy('hello*world', 'anyone', '*', {
+        hello: {
+            world: 'someone',
+            cloud: true
+        }
+    });
+    
+    const expected = {
         hello: {
             world: 'anyone',
             cloud: true
