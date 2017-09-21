@@ -58,6 +58,7 @@ var nessy = require('nessy/legacy');
 
 - [jessy](https://github.com/coderaiser/jessy "jessy") - get value by object property.
 - [all-object-keys](https://github.com/coderaiser/all-object-keys "all-object-keys") - get all keys of object.
+- [finicky](https://github.com/coderaiser/finicky "finicky") delete property of an object
 
 ## License
 
