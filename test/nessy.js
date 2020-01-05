@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('tape');
+const test = require('supertape');
 const nessy = require('..');
 
 test('arguments: no', (t) => {
@@ -9,11 +9,11 @@ test('arguments: no', (t) => {
 });
 
 test('result: should return nested object', (t) => {
-    const actual        = nessy('hello.world');
-    const expected      = {
+    const actual = nessy('hello.world');
+    const expected = {
         hello: {
-            world: undefined
-        }
+            world: undefined,
+        },
     };
     
     t.deepEqual(actual, expected, 'should return object');
@@ -21,12 +21,12 @@ test('result: should return nested object', (t) => {
 });
 
 test('result: should set object\'s property', (t) => {
-    const actual        = nessy('hello', 'world', {
-        hello: 'something'
+    const actual = nessy('hello', 'world', {
+        hello: 'something',
     });
     
-    const expected      = {
-        hello: 'world'
+    const expected = {
+        hello: 'world',
     };
     
     t.deepEqual(actual, expected, 'should return object');
@@ -37,15 +37,15 @@ test('result: should set object\'s property, when there is parent node', (t) => 
     const actual = nessy('hello.world', 'anyone', {
         hello: {
             world: 'someone',
-            cloud: true
-        }
+            cloud: true,
+        },
     });
     
     const expected = {
         hello: {
             world: 'anyone',
-            cloud: true
-        }
+            cloud: true,
+        },
     };
     
     t.deepEqual(actual, expected, 'should not clear parent node');
@@ -56,15 +56,15 @@ test('nessy: custom divider', (t) => {
     const actual = nessy('hello*world', 'anyone', '*', {
         hello: {
             world: 'someone',
-            cloud: true
-        }
+            cloud: true,
+        },
     });
     
     const expected = {
         hello: {
             world: 'anyone',
-            cloud: true
-        }
+            cloud: true,
+        },
     };
     
     t.deepEqual(actual, expected, 'should not clear parent node');
@@ -72,8 +72,8 @@ test('nessy: custom divider', (t) => {
 });
 
 test('result: should modify object', (t) => {
-    const obj             = {};
-    const actual        = nessy('hello.world', 'good', obj);
+    const obj = {};
+    const actual = nessy('hello.world', 'good', obj);
     t.deepEqual(actual, obj, 'object should be changed');
     t.end();
 });

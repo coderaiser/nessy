@@ -4,24 +4,13 @@
   "description": "set value in nested object",
   "main": "lib/nessy.js",
   "scripts": {
-    "test": "tape test/*.js",
-    "watcher": "nodemon -w test -w lib --exec",
-    "watch:test": "npm run watcher -- npm test",
-    "eslint": "eslint lib test",
-    "lint": "redrun eslit",
-    "build": "redrun clean init 6to5 legacy:* bundle bundle:es6 minify",
-    "minify": "minify dist/nessy.js > dist/nessy.min.js",
-    "wisdom": "npm run build",
-    "init": "mkdirp dist legacy",
-    "clean": "rimraf legacy dist",
-    "bundle:base": "browserify -s nessy --ng false",
-    "bundle": "npm run bundle:base -- -r ./legacy/lib/nessy.js:nessy ./legacy/lib/nessy.js -o dist/nessy.js",
-    "bundle:es6:base": "npm run bundle:base -- -r ./lib/nessy.js:nessy ./lib/nessy.js",
-    "bundle:es6": "npm run bundle:es6:base -- -o dist/nessy.es6.js",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "6to5": "babel lib -d legacy/lib",
-    "legacy:index": "echo \"module.exports = require('./lib/nessy');\" > legacy/index.js"
+    "test": "madrun test",
+    "watcher": "madrun watcher",
+    "watch:test": "madrun watch:test",
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
   },
   "repository": {
     "type": "git",
@@ -39,20 +28,21 @@
   "bugs": {
     "url": "https://github.com/coderaiser/nessy/issues"
   },
+  "engine": {
+    "node": ">=4"
+  },
   "homepage": "https://github.com/coderaiser/nessy",
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "browserify": "^16.0.0",
     "coveralls": "^3.0.0",
     "eslint": "^5.6.0",
-    "minify": "^3.0.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-putout": "^3.2.0",
+    "madrun": "^5.4.1",
     "nodemon": "^1.10.2",
     "nyc": "^12.0.2",
+    "putout": "^7.4.1",
     "redrun": "^7.0.0",
-    "rimraf": "^2.4.3",
-    "tape": "^4.2.0"
+    "supertape": "^1.2.4"
   },
   "dependencies": {}
 }
