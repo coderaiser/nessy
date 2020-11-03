@@ -13,37 +13,29 @@ const nessy = require('nessy');
 
 nessy('hello.world', 'why not?', '.', {
     hello: {
-        world: {
-            'could be used in browser as well'
-        }
-    }
+        world: 'could be used in browser as well',
+    },
 });
 
 // returns
-{
+({
     hello: {
-        world: {
-            'why not?'
-        }
-    }
-}
+        world: 'why not?',
+    },
+});
 
 nessy('hello*world', 'why not?', '*', {
     hello: {
-        world: {
-            'can be used any divider'
-        }
-    }
+        world: 'can be used any divider',
+    },
 });
 
 // returns
-{
+({
     hello: {
-        world: {
-            'why not?'
-        }
-    }
-}
+        world: 'why not?',
+    },
+});
 ```
 
 ## Related
@@ -56,14 +48,22 @@ nessy('hello*world', 'why not?', '*', {
 
 MIT
 
-[NPMIMGURL]:                https://img.shields.io/npm/v/nessy.svg?style=flat
-[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/nessy/master.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/nessy.svg?style=flat
-[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
-[NPMURL]:                   https://npmjs.org/package/nessy "npm"
-[BuildStatusURL]:           https://travis-ci.org/coderaiser/nessy  "Build Status"
-[DependencyStatusURL]:      https://david-dm.org/coderaiser/nessy "Dependency Status"
-[LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
+[NPMIMGURL]: https://img.shields.io/npm/v/nessy.svg?style=flat
 
-[CoverageURL]:              https://coveralls.io/github/coderaiser/nessy?branch=master
-[CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/nessy/badge.svg?branch=master&service=github
+[BuildStatusIMGURL]: https://img.shields.io/travis/coderaiser/nessy/master.svg?style=flat
+
+[DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/nessy.svg?style=flat
+
+[LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+
+[NPMURL]: https://npmjs.org/package/nessy "npm"
+
+[BuildStatusURL]: https://travis-ci.org/coderaiser/nessy "Build Status"
+
+[DependencyStatusURL]: https://david-dm.org/coderaiser/nessy "Dependency Status"
+
+[LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
+
+[CoverageURL]: https://coveralls.io/github/coderaiser/nessy?branch=master
+
+[CoverageIMGURL]: https://coveralls.io/repos/coderaiser/nessy/badge.svg?branch=master&service=github
