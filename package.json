@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/coderaiser/nessy/issues"
   },
-  "engine": {
+  "engines": {
     "node": ">=4"
   },
   "homepage": "https://github.com/coderaiser/nessy",
