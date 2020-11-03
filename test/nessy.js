@@ -74,6 +74,29 @@ test('nessy: custom divider', (t) => {
 test('result: should modify object', (t) => {
     const obj = {};
     const actual = nessy('hello.world', 'good', obj);
+    
     t.deepEqual(actual, obj, 'object should be changed');
     t.end();
 });
+
+test('nessy: prototype pollution: __proto__', (t) => {
+    const obj = {};
+    nessy('a/__proto__/polluted', 'Yes! Its Polluted', '/', obj);
+    
+    t.notOk({}.polluted);
+    t.end();
+});
+
+test('nessy: prototype pollution: prototype', (t) => {
+    const obj = {};
+    nessy(
+        'a/constructor/prototype/polluted',
+        'Yes! Its Polluted',
+        '/',
+        obj,
+    );
+    
+    t.notOk({}.polluted);
+    t.end();
+});
+
