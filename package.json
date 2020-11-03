@@ -16,6 +16,12 @@
     "type": "git",
     "url": "git://github.com/coderaiser/nessy.git"
   },
+  "nyc": {
+    "exclude": [
+      ".madrun.js",
+      "test"
+    ]
+  },
   "keywords": [
     "json",
     "object",
