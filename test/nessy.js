@@ -1,10 +1,13 @@
 'use strict';
 
 const test = require('supertape');
+const tryCatch = require('try-catch');
 const nessy = require('..');
 
 test('arguments: no', (t) => {
-    t.throws(nessy, /selector should be string!/, 'should throw when no path');
+    const [error] = tryCatch(nessy);
+    
+    t.equal(error.message, 'selector should be string!', 'should throw when no path');
     t.end();
 });
 
@@ -20,7 +23,7 @@ test('result: should return nested object', (t) => {
     t.end();
 });
 
-test('result: should set object\'s property', (t) => {
+test(`result: should set object's property`, (t) => {
     const actual = nessy('hello', 'world', {
         hello: 'something',
     });
@@ -33,7 +36,7 @@ test('result: should set object\'s property', (t) => {
     t.end();
 });
 
-test('result: should set object\'s property, when there is parent node', (t) => {
+test(`result: should set object's property, when there is parent node`, (t) => {
     const actual = nessy('hello.world', 'anyone', {
         hello: {
             world: 'someone',
@@ -89,14 +92,9 @@ test('nessy: prototype pollution: __proto__', (t) => {
 
 test('nessy: prototype pollution: prototype', (t) => {
     const obj = {};
-    nessy(
-        'a/constructor/prototype/polluted',
-        'Yes! Its Polluted',
-        '/',
-        obj,
-    );
+    
+    nessy('a/constructor/prototype/polluted', 'Yes! Its Polluted', '/', obj);
     
     t.notOk({}.polluted);
     t.end();
 });
-
