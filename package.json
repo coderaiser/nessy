@@ -44,7 +44,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^24.1.0",
     "madrun": "^10.2.5",
-    "nodemon": "^2.0.6",
+    "nodemon": "^3.1.9",
     "nyc": "^15.1.0",
     "putout": "^38.1.8",
     "supertape": "^2.0.1"
