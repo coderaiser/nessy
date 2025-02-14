@@ -39,6 +39,7 @@
   },
   "homepage": "https://github.com/coderaiser/nessy",
   "devDependencies": {
+    "c8": "^10.1.3",
     "coveralls": "^3.0.0",
     "eslint": "^9.20.1",
     "eslint-plugin-node": "^11.0.0",
