@@ -4,3 +4,6 @@ test
 bower.json
 *.swp
 
+yarn-error.log
+coverage
+*.config.*

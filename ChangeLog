@@ -78,7 +78,7 @@ feature:
 2016.09.19, v1.1.1
 
 fix:
-- (nessy) prevent removing of parent childs
+- (nessy) prevent removing of parent children
 
 feature:
 - (package) scripts: add watch:test

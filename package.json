@@ -1,6 +1,7 @@
 {
   "name": "nessy",
   "version": "5.0.0",
+  "type": "commonjs",
   "description": "set value in nested object",
   "main": "lib/nessy.js",
   "scripts": {
@@ -14,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/coderaiser/nessy.git"
+    "url": "git+https://github.com/coderaiser/nessy.git"
   },
   "keywords": [
     "json",
