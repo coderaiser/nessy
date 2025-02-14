@@ -47,7 +47,7 @@
     "nodemon": "^3.1.9",
     "nyc": "^15.1.0",
     "putout": "^38.1.8",
-    "supertape": "^2.0.1"
+    "supertape": "^10.10.0"
   },
   "dependencies": {}
 }
