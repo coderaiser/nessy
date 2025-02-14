@@ -4,14 +4,14 @@ const test = require('supertape');
 const tryCatch = require('try-catch');
 const nessy = require('..');
 
-test('arguments: no', (t) => {
+test('nessy: arguments: no', (t) => {
     const [error] = tryCatch(nessy);
     
     t.equal(error.message, 'selector should be string!', 'should throw when no path');
     t.end();
 });
 
-test('result: should return nested object', (t) => {
+test('nessy: result: should return nested object', (t) => {
     const actual = nessy('hello.world');
     const expected = {
         hello: {
@@ -23,7 +23,7 @@ test('result: should return nested object', (t) => {
     t.end();
 });
 
-test(`result: should set object's property`, (t) => {
+test(`nessy: result: should set object's property`, (t) => {
     const actual = nessy('hello', 'world', {
         hello: 'something',
     });
@@ -36,7 +36,7 @@ test(`result: should set object's property`, (t) => {
     t.end();
 });
 
-test(`result: should set object's property, when there is parent node`, (t) => {
+test(`nessy: result: should set object's property, when there is parent node`, (t) => {
     const actual = nessy('hello.world', 'anyone', {
         hello: {
             world: 'someone',
@@ -74,7 +74,7 @@ test('nessy: custom divider', (t) => {
     t.end();
 });
 
-test('result: should modify object', (t) => {
+test('nessy: result: should modify object', (t) => {
     const obj = {};
     const actual = nessy('hello.world', 'good', obj);
     
@@ -96,5 +96,15 @@ test('nessy: prototype pollution: prototype', (t) => {
     nessy('a/constructor/prototype/polluted', 'Yes! Its Polluted', '/', obj);
     
     t.notOk({}.polluted);
+    t.end();
+});
+
+test(`nessy: array`, (t) => {
+    const actual = nessy('hello.0', 'world', {});
+    const expected = {
+        hello: ['world'],
+    };
+    
+    t.deepEqual(actual, expected);
     t.end();
 });

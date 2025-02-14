@@ -36,6 +36,14 @@ nessy('hello*world', 'why not?', '*', {
         world: 'why not?',
     },
 });
+
+// even arrays supported
+nessy('hello.0', 'world', {});
+
+// returns
+({
+    hello: ['world'],
+});
 ```
 
 ## Related
