@@ -1,3 +1,16 @@
+2025.02.14, v5.0.0
+
+feature:
+- b3ee7f2 nessy: drop support of node < 18
+- 51f7a22 nessy: eslint-plugin-n v17.15.1
+- 00270b3 nessy: c8 v10.1.3
+- 929d6f6 nessy: supertape v10.10.0
+- eefff9f nessy: nodemon v3.1.9
+- 4cf467b nessy: madrun v10.2.5
+- 22d95c9 nessy: eslint v9.20.1
+- 602a225 nessy: eslint-plugin-putout v24.1.0
+- 4f61f6d nessy: putout v38.1.8
+
 2020.11.04, v4.0.0
 
 feature:
