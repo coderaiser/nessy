@@ -1,3 +1,8 @@
+2025.02.16, v5.2.0
+
+feature:
+- 6db9969 nessy: selector: numbers start not from zero
+
 2025.02.14, v5.1.0
 
 feature:
