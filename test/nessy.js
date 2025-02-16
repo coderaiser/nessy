@@ -112,6 +112,7 @@ test(`nessy: array`, (t) => {
 test(`nessy: array: no first`, (t) => {
     const actual = nessy('hello.1', 'world', {});
     nessy('hello.0', 'again', actual);
+    
     const expected = {
         hello: ['again', 'world'],
     };
