@@ -16,7 +16,7 @@ Set value in nested object.
 ## Hot to use?
 
 ```js
-const nessy = require('nessy');
+import {nessy} form 'nessy';
 
 nessy('hello.world', 'why not?', '.', {
     hello: {

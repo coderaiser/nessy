@@ -1,9 +1,15 @@
 {
   "name": "nessy",
   "version": "5.3.0",
-  "type": "commonjs",
+  "type": "module",
   "description": "set value in nested object",
-  "main": "lib/nessy.js",
+  "main": "lib/nessy.cjs",
+  "exports": {
+    ".": {
+      "require": "./lib/nessy.cjs",
+      "import": "./lib/nessy.js"
+    }
+  },
   "scripts": {
     "test": "madrun test",
     "watcher": "madrun watcher",
@@ -30,7 +36,7 @@
     "url": "https://github.com/coderaiser/nessy/issues"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "homepage": "https://github.com/coderaiser/nessy",
   "devDependencies": {
