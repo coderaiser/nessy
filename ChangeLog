@@ -1,3 +1,13 @@
+2026.01.11, v6.0.0
+
+feature:
+- c0887b8 nessy: migrate to ESM
+- 5399598 nessy: try-catch v4.0.7
+- 395a20f nessy: supertape v12.0.9
+- 631a552 nessy: putout v41.6.5
+- c9ff201 nessy: madrun v12.1.0
+- 0d1f33e nessy: eslint-plugin-putout v29.3.0
+
 2025.03.06, v5.3.0
 
 feature:
