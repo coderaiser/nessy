@@ -16,37 +16,30 @@ Set value in nested object.
 ## Hot to use?
 
 ```js
-import {nessy} form 'nessy';
+import {nessy} from 'nessy';
 
 nessy('hello.world', 'why not?', '.', {
     hello: {
         world: 'could be used in browser as well',
     },
-});
-
-// returns
-({
+})(// returns
+{
     hello: {
         world: 'why not?',
     },
 });
-
 nessy('hello*world', 'why not?', '*', {
     hello: {
         world: 'can be used any divider',
     },
 });
-
-// returns
 ({
     hello: {
         world: 'why not?',
     },
 });
-
 // even arrays supported
 nessy('hello.0', 'world', {});
-// returns
 ({
     hello: ['world'],
 });
