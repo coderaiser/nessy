@@ -1,6 +1,6 @@
 import test from 'supertape';
 import {tryCatch} from 'try-catch';
-import nessy from '../lib/nessy.js';
+import {nessy} from '../lib/nessy.js';
 
 test('nessy: arguments: no', (t) => {
     const [error] = tryCatch(nessy);

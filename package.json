@@ -4,12 +4,7 @@
   "type": "module",
   "description": "set value in nested object",
   "main": "lib/nessy.cjs",
-  "exports": {
-    ".": {
-      "require": "./lib/nessy.cjs",
-      "import": "./lib/nessy.js"
-    }
-  },
+  "exports": "./lib/nessy.js",
   "scripts": {
     "test": "madrun test",
     "watcher": "madrun watcher",
