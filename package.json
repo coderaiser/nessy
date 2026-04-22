@@ -1,6 +1,6 @@
 {
   "name": "nessy",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "type": "module",
   "description": "set value in nested object",
   "main": "lib/nessy.cjs",
